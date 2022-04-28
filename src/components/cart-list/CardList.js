@@ -4,14 +4,16 @@ function CardList(props) {
   
 
   return (
-    <div className="card-container">  
+    <div className="card-list-container">  
       {props.data.map(monsters => {
-      return ( 
-       <div id={monsters.id} >
-       <h2>{monsters.name}</h2>
-       </div>
-        )
-    })}
+        return ( 
+        <div className="card-wrapper" >
+          <div className="card">
+            <div>{monsters.name}</div>
+          </div>
+        </div>
+          )
+      })}
     </div>
   )
 }
